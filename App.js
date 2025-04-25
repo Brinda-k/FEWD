@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [message, setMessage] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
 
-  const handleMouseEnter = () => {
-    setMessage('You hovered over the element!');
-  };
-
-  const handleMouseLeave = () => {
-    setMessage('');
+  const handleTextClick = () => {
+    setIsFocused(true);
   };
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h2
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ display: 'inline-block', cursor: 'pointer' }}
+    <div className="container">
+      {/* Clickable Text */}
+      <p
+        className={`clickable-text ${isFocused ? 'focused' : ''} hover-blur`}
+        onClick={handleTextClick}
+        tabIndex={0}
       >
-        Hover over me
-      </h2>
-      <p>{message}</p>
+        Click me to focus with color
+      </p>
+
+      {/* Hoverable Text */}
+      <p className="hover-blur">Hover over me to blur</p>
+
+      {/* Hoverable Image */}
+      <img
+        className="hover-blur"
+        src="https://via.placeholder.com/200"
+        alt="Example"
+      />
     </div>
   );
 }
