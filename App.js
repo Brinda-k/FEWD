@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [message, setMessage] = useState('Welcome to my site!');
+  const [message, setMessage] = useState('');
 
-  const handleClick = () => {
-    setMessage('Thanks for clicking the button!');
+  const handleMouseEnter = () => {
+    setMessage('You hovered over the element!');
+  };
+
+  const handleMouseLeave = () => {
+    setMessage('');
   };
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1>{message}</h1>
-      <button onClick={handleClick}>
-        Click Me
-      </button>
+      <h2
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{ display: 'inline-block', cursor: 'pointer' }}
+      >
+        Hover over me
+      </h2>
+      <p>{message}</p>
     </div>
   );
 }
