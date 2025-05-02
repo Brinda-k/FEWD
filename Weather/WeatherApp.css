@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.container {
+  max-width: 480px;
+  margin: 5% auto;
+  padding: 30px 25px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: #f1f1f1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #ffd369;
+  letter-spacing: 1px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 70%;
+  max-width: 280px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 8px rgba(255, 211, 105, 0.8);
+  border-color: #ffd369;
+}
+
+button {
+  padding: 12px 18px;
+  background-color: #7eb7f4;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  color: #2c2c2c;
+}
+
+button:hover {
+  background-color: #fc7248;
+}
+
+#loader {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+#errorMessage {
+  color: #ff5e57;
+  margin-top: 10px;
+}
+
+.weather-info {
+  margin-top: 25px;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.weather-info img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.weather-info h2 {
+  margin: 10px 0 5px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.weather-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #b77575;
+}
